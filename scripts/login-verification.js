@@ -26,10 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function checkUserState(currentState) {
-    if (sessionStorage.getItem("loggedIn") === "false") {
+    if (
+      sessionStorage.getItem("loggedIn") === "false" ||
+      sessionStorage.getItem("loggedIn") == null
+    ) {
+      console.log("Logged state is false");
       userSignedIn.classList.add("hidden");
       userSignedOut.classList.remove("hidden");
     } else {
+      console.log("Logged state signed in...");
       userSignedIn.classList.remove("hidden");
       userSignedOut.classList.add("hidden");
     }

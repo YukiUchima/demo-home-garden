@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const password = document.querySelector("#registerPassword");
   const password2 = document.querySelector("#registerPassword2");
   const email = document.querySelector("#email");
-  const registerSubmitBtn = document.querySelector("#form-register-button");
+  // const registerSubmitBtn = document.querySelector("#form-register-button");
 
   const errUsername = document.querySelector("#reg-username");
   const errPassword = document.querySelector("#reg-password");
