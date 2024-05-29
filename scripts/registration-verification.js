@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   password.addEventListener("change", (event) => {
-    console.log("CHECKING PASSWORd");
     const currentPassword = event.target.value.trim();
-    console.log(currentPassword);
     const reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W)[a-zA-Z\d\W]{8,}$/;
     if (!reg.test(String(currentPassword))) {
       errPassword.classList.remove("hide");

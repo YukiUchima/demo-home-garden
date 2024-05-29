@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   viewInfoBtns.forEach((viewInfoBtn) => {
     viewInfoBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      console.log("VIEW INFO!");
     });
   });
 });
