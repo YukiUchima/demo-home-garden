@@ -2,7 +2,6 @@ import users from "../data/users.js";
 import { toggleModal } from "./show-forms.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const iconLogo = document.querySelector("#logo");
   let loggedInState = sessionStorage.getItem("loggedIn");
   const loginSubmitBtn = document.querySelector("#login-submit-button");
   const form = document.querySelector("#user-login-form > form");
