@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("loggedIn", false);
       localStorage.setItem("userID", "");
     }
-    window.location.href = "landingPage.html";
+    window.location.href = "index";
   });
 });
 
