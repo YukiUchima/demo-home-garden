@@ -1,4 +1,4 @@
-import users from "../data/users.js";
+"use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
   const exitFormBtns = document.querySelectorAll(".cancel-form");

@@ -1,3 +1,5 @@
+"use strict";
+
 import users from "../data/users.js";
 
 document.addEventListener("DOMContentLoaded", () => {

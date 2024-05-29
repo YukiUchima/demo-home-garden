@@ -1,4 +1,4 @@
-import users from "../data/users.js";
+"use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("SBA 308");

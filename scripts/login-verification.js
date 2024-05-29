@@ -1,5 +1,5 @@
 import users from "../data/users.js";
-import { toggleModal } from "../scripts/show-forms.js";
+import { toggleModal } from "./show-forms.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const iconLogo = document.querySelector("#logo");
