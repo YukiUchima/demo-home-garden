@@ -1,14 +1,14 @@
 import users from "../data/users.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  let uid = localStorage.getItem("userID");
+  let uid = sessionStorage.getItem("userID");
 
   const logoutBtn = document.querySelector(".logout-btn");
 
   logoutBtn.addEventListener("click", () => {
-    if (localStorage.getItem("loggedIn")) {
-      localStorage.setItem("loggedIn", false);
-      localStorage.setItem("userID", "");
+    if (sessionStorage.getItem("loggedIn")) {
+      sessionStorage.setItem("loggedIn", false);
+      sessionStorage.setItem("userID", "");
     }
     window.location.href = "index";
   });

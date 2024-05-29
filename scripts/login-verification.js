@@ -3,7 +3,7 @@ import { toggleModal } from "../scripts/show-forms.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const iconLogo = document.querySelector("#logo");
-  let loggedInState = localStorage.getItem("loggedIn");
+  let loggedInState = sessionStorage.getItem("loggedIn");
   const loginSubmitBtn = document.querySelector("#login-submit-button");
   const form = document.querySelector("#user-login-form > form");
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function checkUserState(currentState) {
-    if (localStorage.getItem("loggedIn") === "false") {
+    if (sessionStorage.getItem("loggedIn") === "false") {
       userSignedIn.classList.add("hidden");
       userSignedOut.classList.remove("hidden");
     } else {
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function validateLogin(username, password) {
     let foundUser = users.find((user) => user.userName === username);
     if (foundUser && foundUser.password === password) {
-      localStorage.setItem("loggedIn", true);
-      localStorage.setItem("userID", foundUser.id);
+      sessionStorage.setItem("loggedIn", true);
+      sessionStorage.setItem("userID", foundUser.id);
       toggleModal();
-      checkUserState(localStorage.getItem("loggedIn"));
+      checkUserState(sessionStorage.getItem("loggedIn"));
       toggleError(failedLoginMsg, "off");
     } else {
       toggleError(failedLoginMsg, "on");
@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   logoutBtn.addEventListener("click", () => {
-    if (localStorage.getItem("loggedIn")) {
-      localStorage.setItem("loggedIn", false);
-      localStorage.setItem("userID", "");
+    if (sessionStorage.getItem("loggedIn")) {
+      sessionStorage.setItem("loggedIn", false);
+      sessionStorage.setItem("userID", "");
     }
     window.location.href = "index";
   });
